@@ -28,15 +28,15 @@ footer{ background: #f8f9fb;}
 
 /* index */
 
-.title {display: block; margin-bottom:10px;}
+.title {display: inline-block; margin-bottom:30px; font-size:20px;}
 .top {
-	background: url('../images/소나무.jpg') no-repeat 0 -250px;
+	background: url('../images/나무.jpg') no-repeat 0 -600px;
 	background-size: cover; padding: 50px; height: 600px;}
-.top > .logo {text-align: center; border:1px solid #fde700; 
+.logo {text-align: center; border:1px solid #fde700; 
 	border-radius: 50px; background: #fde700; width:60px; height:60px; 
 	font-size: 35px; margin-bottom:30px; position: relative;
 }
-.top > .logo > h4 {    
+.logo > h4 {    
 	position: absolute;
     top: 50%;
     left: 50%;
@@ -46,25 +46,28 @@ footer{ background: #f8f9fb;}
     font-size: 60px;
     letter-spacing: -3px;
     line-height: 60px;}
-.top > .text > span {display: block; margin-top:100px; position: relative;}
-.top > .text > span::before {content: ''; position: absolute; top:-25px; left:0; background:#fde700; width:25px; height: 5px;}
+.top > .text > span {display: block; margin-top:100px; position: relative; color:#fde700;}
+.top > .text > span::before {content: ''; position: absolute; bottom:-10px; left:0; background:#fde700; width:70px; height: 4px;}
 .main {max-width:1200px; margin: 0 auto;}
-.intro { margin: 50px 0;}
-.site {margin: 50px 0;}
+.main > div {margin: 50px 0;}
+.main > .sentence > h3 {font-size: 30px; text-align: right;}
+.intro > span:nth-child(2) {font-size:13px; color:#999; vertical-align: text-top;}
+.intro > span:nth-child(3) {display: block;}
 .site > ul::after {content: ''; display: block; clear: left;}
-.site > ul > li {width: 285px; float: left; border-radius: 150px; position: relative;}
+.site > ul > li {width: 285px; float: left; border-radius: 170px; position: relative;}
 .site > ul > li + li {margin-left:20px;}
 .site > ul > li:nth-child(1) {background: url('../hyndai_global/images/m_mainVis_bg.jpg') 0 -530px no-repeat;}
 .site > ul > li:nth-child(2) {background: url('../navercorp/images/img_main_slide4.jpg');}
-.site > ul > li:nth-child(3) {background:#fde700;}
+.site > ul > li:nth-child(3) {background: url('../aict/images/slider2.jpg') no-repeat -1570px -63px;}
 .site > ul > li:nth-child(4) {background:#e4e4e4; pointer-events: none;}
-.site > ul > li > a {width:305px; height:305px; display: block; border-radius: 155px;}
+.site > ul > li > a {width:305px; height:305px; display: block; border-radius: 150px;}
 .site > ul > li > a > span {position: absolute; top:50%; left:50%; 
 	transform: translate(-50%, -50%); font-size: 80px; color:white;
 	font-weight: 800;}
 
 /* footer */
 
-.footer_wrap {max-width: 1200px; margin:0 auto;}
+.footer_wrap {max-width: 1200px; margin:0 auto; position: relative;}
 .footer_wrap > .left {padding:50px 0;}
-.footer_wrap > .left span {display: block;}
+.footer_wrap > .left > * {display: inline;}
+.footer_wrap > .logo {margin:0; position: absolute; top:50%; right:0; transform: translateY(-50%);}
