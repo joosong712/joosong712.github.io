@@ -27,11 +27,11 @@ footer{ background: #f8f9fb;}
 
 
 /* index */
-
-.title {display: inline-block; margin-bottom:30px; font-size:20px;}
+.wrap {overflow: hidden;}
+.title {display: inline-block; margin-bottom:30px; margin-right:5px; font-size:20px;}
 .top {
 	background: url('../images/나무.jpg') no-repeat 0 -600px;
-	background-size: cover; padding: 50px; height: 600px;}
+	background-size: cover; padding: 50px; height: 600px; width:1580px;}
 .logo {text-align: center; border:1px solid #fde700; 
 	border-radius: 50px; background: #fde700; width:60px; height:60px; 
 	font-size: 35px; margin-bottom:30px; position: relative;
@@ -51,13 +51,14 @@ footer{ background: #f8f9fb;}
 .sentence {max-width:1200px; margin: 50px auto;}
 .sentence > h3 {font-size: 30px; text-align: right;}
 .intro {max-width:1200px; margin: 0 auto 50px;}
-.intro > span:nth-child(2) {font-size:13px; color:#999; vertical-align: text-top;}
+.main > div > span:nth-child(2) {font-size:13px; color:#999; vertical-align: text-top;}
 .intro > span:nth-child(3) {display: block;}
 .skill {background: #fde700;}
 .skill_wrap {max-width:1200px; margin: 50px auto;}
-.skill_wrap > ul {padding:20px 0;}
+.skill_wrap > ul {padding:30px 0;}
 .skill_wrap > ul::after {display: block; content: ''; clear: left;}
-.skill_wrap > ul > li {width:200px; float: left; color:rgba(255, 255, 255, 0.9); text-align: center; font-size:20px;}
+.skill_wrap > ul > li {width:200px; float: left; color:rgba(0, 0, 0, 0.4); text-align: center; font-size:20px; position: relative;}
+.skill_wrap > ul > li + li::before {content: ''; position:absolute; top:10px; left:0; width:5px; height:5px; background:white; display: block;}
 .skill_wrap > ul > li > strong {display: block; margin-bottom:15px;}
 .skill_wrap > ul > li > img {width:100px;}
 .site {max-width:1200px; margin: 50px auto;}
@@ -68,7 +69,8 @@ footer{ background: #f8f9fb;}
 .site > ul > li:nth-child(2) {background: url('../navercorp/images/img_main_slide4.jpg');}
 .site > ul > li:nth-child(3) {background: url('../aict/images/slider2.jpg') no-repeat -1570px -63px;}
 .site > ul > li:nth-child(4) {background:#e4e4e4; pointer-events: none;}
-.site > ul > li > a {width:305px; height:305px; display: block; border-radius: 150px;}
+.site > ul > li > a {width:285px; height:305px; display: block; border-radius: 150px;}
+.site > ul > li > a:hover {background: rgba(0, 0, 0, 0.4);}
 .site > ul > li > a > span {position: absolute; top:50%; left:50%; 
 	transform: translate(-50%, -50%); font-size: 80px; color:white;
 	font-weight: 800;}
