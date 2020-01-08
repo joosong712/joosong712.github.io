@@ -48,11 +48,19 @@ footer{ background: #f8f9fb;}
     line-height: 60px;}
 .top > .text > span {display: block; margin-top:100px; position: relative; color:#fde700;}
 .top > .text > span::before {content: ''; position: absolute; bottom:-10px; left:0; background:#fde700; width:70px; height: 4px;}
-.main {max-width:1200px; margin: 0 auto;}
-.main > div {margin: 50px 0;}
-.main > .sentence > h3 {font-size: 30px; text-align: right;}
+.sentence {max-width:1200px; margin: 50px auto;}
+.sentence > h3 {font-size: 30px; text-align: right;}
+.intro {max-width:1200px; margin: 0 auto 50px;}
 .intro > span:nth-child(2) {font-size:13px; color:#999; vertical-align: text-top;}
 .intro > span:nth-child(3) {display: block;}
+.skill {background: #fde700;}
+.skill_wrap {max-width:1200px; margin: 50px auto;}
+.skill_wrap > ul {padding:20px 0;}
+.skill_wrap > ul::after {display: block; content: ''; clear: left;}
+.skill_wrap > ul > li {width:200px; float: left; color:rgba(255, 255, 255, 0.9); text-align: center; font-size:20px;}
+.skill_wrap > ul > li > strong {display: block; margin-bottom:15px;}
+.skill_wrap > ul > li > img {width:100px;}
+.site {max-width:1200px; margin: 50px auto;}
 .site > ul::after {content: ''; display: block; clear: left;}
 .site > ul > li {width: 285px; float: left; border-radius: 170px; position: relative;}
 .site > ul > li + li {margin-left:20px;}
