@@ -63,11 +63,11 @@ header.active {top:0;}
 nav { position: absolute; top:0; left:50%; margin-left:-300px;}
 nav .menu {font-size: 15px; font-weight: bolder; }
 nav .menu::after{clear: both; display: block; content: '';}
-nav .menu > .drop_warp > ul.on {display: block;}
+nav .menu > .drop_warp > ul.on {display: block; transition: all 0.7s ease;}
 
 nav .menu > .drop_warp {float: left; color:#fff; display: inline-block;}
 nav .menu > .drop_warp > ul {position: fixed; text-align: center; top:80px; 
-    left:0; right:0; z-index: 100; display: none; height: 0px; transition: all 0.7s ease;
+    left:0; right:0; z-index: 100; display: none; height: 0px; transition: all 0.3s ease;
     background-color: #35c452; font-size:0; min-width: 1100px; overflow: hidden;}
 nav .menu > .drop_warp > ul > li { width: 150px; padding:28px 20px; display: inline-block; height:250px;
     font-size:15px; vertical-align: text-top; text-align: left; transition: all 0.7s ease;
