@@ -111,10 +111,9 @@ main {padding-top:90px;}
 .news > .news_text > .data {float: right;}
 .news > .news_text > .open {position: absolute; top: 50%; right: 40px; transform: translateY(-50%);}
 
-.news_up.on {display: block;}
+.news_up.on {height: 250px; padding: 55px 40px 25px;}
 .news_up {position: absolute; bottom:0; background: rgba(255, 255, 255, 0.8);
-     left:50%; transform: translateX(-50%); width:1120px; height: 250px;
-     padding:55px 40px 25px; display: none;}
+     left:50%; transform: translateX(-50%); width:1120px; height: 0; overflow: hidden;}
 .news_up .left {float: left; width:220px;}
 .news_up .left > p {font-size:16px;}
 .news_up .left > strong {font-size:35px;}
