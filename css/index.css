@@ -54,6 +54,7 @@ footer{ background: #f8f9fb;}
 .intro > ol > li + li {margin-top:10px;}
 .intro > ol > .border {border-bottom:2px solid #e4e4e4; padding-bottom:20px; margin-bottom:20px;}
 .intro > ol > li:last-child > strong {display: block; margin-bottom:10px;}
+.main {margin:50px 0;}
 .main > div > span:nth-child(2) {font-size:13px; color:#999; vertical-align: text-top;}
 .intro > span:nth-child(3) {display: block;}
 .skill {background: #fde700;}
@@ -72,7 +73,7 @@ footer{ background: #f8f9fb;}
 .site > ul > li:nth-child(2) {background: url('../aict/images/slider2.jpg') no-repeat -1570px -63px;}
 .site > ul > li:nth-child(3) {background: url('../navercorp/images/img_main_slide4.jpg');}
 .site > ul > li:nth-child(4) {background:#e4e4e4; pointer-events: none;}
-.site > ul > li > a {width:285px; height:305px; display: block; border-radius: 150px;}
+.site > ul > li > a {width:285px; height:295px; display: block; border-radius: 150px;}
 .site > ul > li > a:hover {background: rgba(0, 0, 0, 0.2);}
 .site > ul > li > a > span {position: absolute; top:50%; left:50%; 
 	transform: translate(-50%, -50%); font-size: 80px; color:white;
@@ -86,3 +87,32 @@ footer{ background: #f8f9fb;}
 .footer_wrap > .left {padding:50px 0; float: left;}
 .footer_wrap > .left > * {display: block; position: relative;}
 .footer_wrap > .logo {margin:0; position: absolute; top:50%; right:0; transform: translateY(-50%);}
+
+@media screen and (min-width:320px) and (max-width: 1000px) {
+	.top {width: 100%; background:url('../images/나무.jpg') no-repeat 0 0;}
+	.sentence {padding: 0 51px}
+	.intro {padding: 0 30px;}
+	.title {margin-bottom:15px;}
+	.main > div > span:nth-child(2) {display: block; margin-bottom:20px;}
+	.intro > ol > li > * {display: block;}
+	.skill_wrap > ul > li {width:50%}
+	.skill_wrap > ul > li > img {width:30%;}
+	.skill_wrap > ul > li + li::before {display: none;}
+	.skill_wrap > ul > li:nth-child(2n)::before {content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 5px;
+		height: 5px;
+		background: white;
+		display: block;}
+	.site {padding: 0 30px}
+	.site > ul > li {width:calc(50% - 5px); height:100%;}
+	.site > ul > li > a {height: 165px; width:100%;}
+	.site > ul > li + li {margin:0;}
+	.site > ul > li:nth-child(2n) {margin-left:10px;}
+	.site > ul > li:nth-child(3), .site > ul > li:nth-child(4) {margin-top:10px;}
+	.footer_wrap > strong {font-size: 20px;}
+	.site > ul > li > a > span {font-size: 50px;}
+	
+}
