@@ -108,10 +108,12 @@ footer{ background: #f8f9fb;}
 		display: block;}
 	.site {padding: 0 30px}
 	.site > ul > li {width:calc(50% - 5px); height:100%;}
-	.site > ul > li > a {height: 165px; width:100%;}
+	.site > ul > li > a {height: 155px; width:100%;}
 	.site > ul > li + li {margin:0;}
 	.site > ul > li:nth-child(2n) {margin-left:10px;}
 	.site > ul > li:nth-child(3), .site > ul > li:nth-child(4) {margin-top:10px;}
+	.footer_wrap {padding: 0 30px;}
+	.footer_wrap > .logo {right:30px;}
 	.footer_wrap > strong {font-size: 20px;}
 	.site > ul > li > a > span {font-size: 50px;}
 	
