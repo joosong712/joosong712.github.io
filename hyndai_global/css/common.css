@@ -415,15 +415,6 @@ footer > .bottom >.bottom_logo {position: absolute; top:90px; right:150px;}
     .section2 .icon_wrap > div > a:hover {transition: none; height: auto;}
     .section3 .box {width:180px; margin-left:-90px;}
 
-
-
-
-
-
-
-
-
-
     footer {text-align: center; font-size:12px;}
     footer > .top {padding:20px 0 60px ; border-bottom:0.5px solid #999999;}
     footer > .top > ul > li {margin: 0 10px;}
@@ -447,4 +438,18 @@ footer > .bottom >.bottom_logo {position: absolute; top:90px; right:150px;}
     footer > .bottom >.bottom_logo {position: absolute; top:120px; right:0px; left:0; transform: scale(0.7);}
 
 
+}
+
+@media screen and (max-width:375px) {
+    .section2 > .title_info {font-size: 17px;}
+    .section2 .icon_wrap > div > a > strong {font-size: 15px;}
+    .section2 .icon_wrap > div > a .btn {left:18%;}
+    .section2 .icon_wrap > div > a > span {display:none;}
+    .section3 span {margin:0;}
+    .section3 > .right > .right_bottom .news > li > a {padding:0 20px; width:calc(33.33333% - 41px);}
+    div.bx-wrapper .bx-prev {left:20px;}
+    div.bx-wrapper .bx-next {left: 64px}
+    footer > .top > .family_link {right:unset; top:77px;}
+    footer > .bottom > ul {padding: 0 10px;}
+    footer > .bottom > ul > li {display: inline;}
 }
