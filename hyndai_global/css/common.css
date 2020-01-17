@@ -115,14 +115,6 @@ nav > ul > li > a > span {display: inline-block;}
 .m_header > .m_nav > .m_gnb > ul > li.active .drop_menu {display:block; transition: all 0.3s ease;}
 .m_header > .m_nav > .m_gnb > ul > li.active > a {color: #15245d; font-weight: bold;}
 
-
-
-
-
-
-
-
-
 .m_header > .m_nav > .bottom {padding: 10px 20px;}
 .m_header > .m_nav > .bottom > a {display: block; margin-bottom:10px; color:#555;}
 
@@ -221,6 +213,7 @@ div.bx-wrapper .bx-prev {background-image: url('../images/news_prev.png'); backg
 div.bx-wrapper .bx-prev:hover {background-position: unset;}
 div.bx-wrapper .bx-next {background-image: url('../images/news_next.png'); background-position: unset; left:84px;}
 div.bx-wrapper .bx-next:hover {background-position: unset;}
+div.bx-wrapper .bx-next:focus {background-position: unset;}
 .section3 > .right > .right_bottom .news li {position: absolute; top:0; left:100%; }
 .section3 > .right > .right_bottom .news > li::after {position: absolute; top:0; left:0; content: ''; height:250px;}
 .section3 > .right > .right_bottom .news li:first-child {left:0;}
