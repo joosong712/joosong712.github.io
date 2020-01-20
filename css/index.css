@@ -31,7 +31,7 @@ footer{ background: #f8f9fb;}
 .title {display: inline-block; margin-bottom:30px; margin-right:5px; font-size:20px;}
 .top {
 	background: url('../images/나무.jpg') no-repeat 0 -600px;
-	background-size: cover; padding: 50px; height: 600px; width:1580px;}
+	background-size: cover; padding: 50px; height: 600px; width:100%;}
 .logo {text-align: center; border:1px solid #fde700; 
 	border-radius: 50px; background: #fde700; width:60px; height:60px; 
 	font-size: 35px; margin-bottom:30px; position: relative;
