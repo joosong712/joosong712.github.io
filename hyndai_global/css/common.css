@@ -435,6 +435,7 @@ footer > .bottom >.bottom_logo {position: absolute; top:90px; right:150px;}
 
 @media screen and (max-width:375px) {
     .section1 > .btn .pop_img > img:nth-child(1) {display: none;}
+    .section1 > .btn .pop_img .on > img:nth-child(1) {display: block;}
     .section1 > .btn .pop_img > img:nth-child(2) {display: unset;}
     .section1 > .btn .pop_img {width:85%;}
     .section1 > .btn .pop_img > .pop_close {top:15px; right:15px;}
