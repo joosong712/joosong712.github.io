@@ -95,7 +95,7 @@ nav > ul > li > a > span {display: inline-block;}
 .lang.on > a {color:black; background-color: white;}
 
 
-.m_header > .m_nav {position: absolute; top:0; left: 100%; width:100%; height:auto; background: white; overflow: hidden;}
+.m_header > .m_nav {position: absolute; top:0; left: 100%; width:100%; height:1000px; background: white; overflow: hidden;}
 .m_header > .m_nav > .top {background-color: #15245d; padding:10px 20px; position: relative;} 
 .m_header > .m_nav > .top a {color:white; position: relative; font-size:13px;}
 .m_header > .m_nav > .top a:first-child {margin-right:20px;}
@@ -109,10 +109,21 @@ nav > ul > li > a > span {display: inline-block;}
 .m_header > .m_nav > .m_gnb > ul > li  {display: block;}
 .m_header > .m_nav > .m_gnb > ul > li > a {display: block;
     padding:10px; margin-left:5px; background: url('../images/m_oneD_icon.png') no-repeat 98%; background-size: 8px; }
-.m_header > .m_nav > .m_gnb .drop_menu {display: none; background-color: #fafafa; padding:20px; margin-top:0; border-bottom:0.5px solid rgb(208, 208, 208); border-top:0.5px solid rgb(208, 208, 208); transition: all 0.3s ease;}
+
+.m_header > .m_nav > .m_gnb .drop_menu {
+    background-color: #fafafa; 
+    padding:0 20px; margin-top:0; border-bottom:0.5px solid rgb(208, 208, 208); 
+    border-top:0.5px solid rgb(208, 208, 208); 
+    transition: all 0.3s ease;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
 .m_header > .m_nav > .m_gnb .drop_menu > a:hover {color:black; font-weight: 400;}
+.m_header > .m_nav > .m_gnb .drop_menu > a:first-child {padding-top:8px;}
+.m_header > .m_nav > .m_gnb .drop_menu > a:last-child {padding-bottom:8px;}
 .m_header > .m_nav > .m_gnb > ul > li.active {display: block; background: url('../images/m_oneD_bg.gif') no-repeat 0 0;}
-.m_header > .m_nav > .m_gnb > ul > li.active .drop_menu {display:block; transition: all 0.3s ease;}
+.m_header > .m_nav > .m_gnb > ul > li.active .drop_menu {transition: all 0.3s ease; opacity: 1;}
 .m_header > .m_nav > .m_gnb > ul > li.active > a {color: #15245d; font-weight: bold;}
 
 .m_header > .m_nav > .bottom {padding: 10px 20px;}
@@ -143,9 +154,10 @@ nav > ul > li > a > span {display: inline-block;}
     z-index: 9999;
     transform: translateX(-50%);
 }
+.section1 > .btn .pop_img > img:nth-child(2) {display: none;}
 .section1 > .btn .pop_img > .pop_close {content:''; position: absolute; top:30px; right:30px;}
 .section1 > .btn > ul > li > a {padding: 15px 35px; 
-	background-color: rgba(0, 0, 0, 0.3); color: white;}
+    background-color: rgba(0, 0, 0, 0.3); color: white;}
 .section1 > .btn > ul > li > a:hover {background-color: rgba(0, 0, 0, 0.7); transition: all 0.3s ease;}
 .section1 > .btn > ul > li + li {margin-left:5px;}
 .section1 .scroll {position: absolute; left:0; right:0; bottom:-550px;}
@@ -213,7 +225,6 @@ div.bx-wrapper .bx-prev {background-image: url('../images/news_prev.png'); backg
 div.bx-wrapper .bx-prev:hover {background-position: unset;}
 div.bx-wrapper .bx-next {background-image: url('../images/news_next.png'); background-position: unset; left:84px;}
 div.bx-wrapper .bx-next:hover {background-position: unset;}
-div.bx-wrapper .bx-next:focus {background-position: unset;}
 .section3 > .right > .right_bottom .news li {position: absolute; top:0; left:100%; }
 .section3 > .right > .right_bottom .news > li::after {position: absolute; top:0; left:0; content: ''; height:250px;}
 .section3 > .right > .right_bottom .news li:first-child {left:0;}
@@ -366,7 +377,7 @@ footer > .bottom >.bottom_logo {position: absolute; top:90px; right:150px;}
 
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (min-width:320px) and (max-width: 750px) {
     .section2 .icon_wrap {width:auto; padding:0 15px; }
     .section2 .icon_wrap > div {background: none;height: 210px; border:1px solid white}
     .section2 .icon_wrap > div > a {height:210px;}
@@ -454,4 +465,5 @@ footer > .bottom >.bottom_logo {position: absolute; top:90px; right:150px;}
     footer > .top > .family_link {right:unset; top:77px;}
     footer > .bottom > ul {padding: 0 10px;}
     footer > .bottom > ul > li {display: inline;}
+    
 }
