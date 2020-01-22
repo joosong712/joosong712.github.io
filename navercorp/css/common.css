@@ -125,6 +125,7 @@ div.bx-wrapper .bx-controls-direction a {
     position: absolute;
     top:70%;
     cursor: pointer;
+    z-index: 10;
 }
 div.bx-wrapper .bx-prev:hover, div.bx-wrapper .bx-prev:focus {opacity: 1; background-position: -296px -99px;}
 div.bx-wrapper .bx-next:hover, div.bx-wrapper .bx-next:focus {opacity: 1; background-position: -346px -99px;}
