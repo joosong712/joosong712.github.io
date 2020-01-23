@@ -888,148 +888,177 @@
 
 
     </div>  
-<script>
-var option = { speed : 500, auto : true,pause : 2000, autoControls : true, slideWidth : 3000 }
-
-$(document).ready(function(){
-    $('.slide_wrap').bxSlider();
-    $('.photo_slider > ul').bxSlider(option);
-    $('.logo_slide').bxSlider(option);
-    $('.news_up > ul').bxSlider();
-});
-
-const pageNum = document.querySelector('.photo_wrap .page > span');
-const photoSlider = $('.photo_right').bxSlider({speed : 500});
-    console.log('hi');
-    
-    photoSlider.reloadSlider ({
-        onSlideBefore: function(){
-            onSlideWork(this.getCurrentSlide() + 1);	
-        },
-        onSliderLoad: function() {
-            onSlideWork(this.getCurrentSlide() + 1 );
-        }
-    });
-
-    function onSlideWork (num){
-        pageNum.textContent = num;
-    }
-
-
-
-
-const Nav = document.querySelector('nav > ul');
-const navLis = Nav.querySelectorAll('.drop_menu')
-const allBtn = document.querySelector('.all_menu_btn');
-const allShow = document.querySelector('.all_menu');
-const menuCenter = document.querySelectorAll('.center > li');
-// const menuRight = document.querySelectorAll('.center .right');
-var preMenu;
-
-Nav.addEventListener('mouseover', aictOver);
-Nav.addEventListener('mouseout', aictOut);
-
-allBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    if(allShow.classList.contains('on')){
-        allShow.classList.remove('on');
-        allBtn.style.backgroundImage = "url('images/all_menu_show.jpg')"
-    } else {
-        allShow.classList.add('on');
-        allBtn.style.backgroundImage = "url('images/icon_menuClose.gif')"
-    }
-    
-});
-
-function aictOver(e){
-    e.preventDefault();
-    if (e.target.tagName !== 'A') return
-    console.log(e.target.tagName);
-    const dropMenu = e.target.parentNode.querySelector('div');
-    if(dropMenu) {
-        dropMenu.classList.add('on');
-        preMenu = dropMenu
-    }
-}
-
-function aictOut(e){
-    e.preventDefault();
-    if(preMenu === undefined) return;
-    if(!isLI(preMenu, e.relatedTarget)) {
-        preMenu.classList.remove('on');
-    } 
-    function isLI(preMenu, move) {
-        while (move.tagName !== 'HTML') {
-            if(preMenu === move) {
-                return true;
-            }
-            move = move.parentNode;
-        } 
-        return false;
-    } 
-}
-
-
-for(let i = 0 ; i < menuCenter.length; i++) {
-    menuCenter[i].addEventListener('mouseenter', function(){
-        menuCenter[i].classList.add('active');
-        if(!this.querySelector('ul')) return;
-        if(this.querySelector('ul')){
-            this.querySelector('ul').classList.add('on');
-        }})
-    menuCenter[i].addEventListener('mouseleave', function(){
-        menuCenter[i].classList.remove('active');
-        if(!this.querySelector('ul')) return;
-        if(this.querySelector('ul')){
-            this.querySelector('ul').classList.remove('on');
-        }})
-}
-
-
-const tabElems = document.querySelectorAll('.item > a');
-const tabConts = document.querySelectorAll('.content');
-
-for(let i = 0; i < tabElems.length; i++) {
-    tabElems[i].addEventListener('click', tabon)
-}
-function tabon(e) {
-    e.preventDefault();
-    for(let i = 0; i < tabElems.length; i++) {
-        tabElems[i].parentNode.classList.remove('on');
-        tabConts[i].classList.remove('on');
-        console.log(this.parentNode);
-        if(tabConts[i].classList.contains(this.parentNode.className)) {
-            tabConts[i].classList.add('on');
-        }
-    }
-    this.parentNode.classList.add('on');
-}
-
-const openIcon = document.querySelector('.open');
-const bottomBar = document.querySelector('.news')
-const closeIcon = document.querySelector('.close')
-const openMenu = document.querySelector('.news_up')
-
-openIcon.addEventListener('click', function(e){
-    e.preventDefault();
-    if (openMenu.classList.contains('on')) {
-        openMenu.classList.remove('on')
-        bottomBar.style.display = 'block';
-    } else {
-        openMenu.classList.add('on')
-        bottomBar.style.display = 'none';
+    <script>
+        var option = { speed : 500, auto : true,pause : 2000, autoControls : true, slideWidth : 3000 }
         
-    }
-
-});
-
-closeIcon.addEventListener('click', function(e){
-    e.preventDefault();
-    openMenu.classList.remove('on')
-    bottomBar.style.display = 'block';
-})
-
-
-</script>
-</body>
-</html>
+        $(document).ready(function(){
+            $('.slide_wrap').bxSlider();
+            $('.photo_slider > ul').bxSlider(option);
+            $('.logo_slide').bxSlider(option);
+            $('.news_up > ul').bxSlider();
+        });
+        
+        const pageNum = document.querySelector('.photo_wrap .page > span');
+        const photoSlider = $('.photo_right').bxSlider({speed : 500});
+            
+            photoSlider.reloadSlider ({
+                onSlideBefore: function(){
+                    onSlideWork(this.getCurrentSlide() + 1);	
+                },
+                onSliderLoad: function() {
+                    onSlideWork(this.getCurrentSlide() + 1 );
+                }
+            });
+        
+            function onSlideWork (num){
+                pageNum.textContent = num;
+            }
+        
+        
+        
+        
+        const Nav = document.querySelector('nav > ul');
+        const navLis = Nav.querySelectorAll('.drop_menu')
+        const allBtn = document.querySelector('.all_menu_btn');
+        const allShow = document.querySelector('.all_menu');
+        const menuCenter = document.querySelectorAll('.center > li');
+        const gnbUL = allShow.querySelector('.all_menu > ul');
+        const gnbLis = allShow.querySelectorAll('.all_menu > ul > li');
+        const gnbDepth = allShow.querySelectorAll('.more > .depth')
+        
+        // const menuRight = document.querySelectorAll('.center .right');
+        var preMenu;
+        
+        Nav.addEventListener('mouseover', aictOver);
+        Nav.addEventListener('mouseout', aictOut);
+        gnbUL.addEventListener('click', gnbclick)
+        
+        allBtn.addEventListener('click', function(e){
+            e.preventDefault();
+            if(allShow.classList.contains('on')){
+                allShow.classList.remove('on');
+                allBtn.style.backgroundImage = "url('images/all_menu_show.jpg')"
+            } else {
+                allShow.classList.add('on');
+                allBtn.style.backgroundImage = "url('images/icon_menuClose.gif')"
+            }
+            
+        });
+        
+        function gnbclick(e){
+            e.preventDefault();
+            if(e.target.tagName === 'A') {
+                for (let i = 0; i < gnbLis.length; i++) {
+                    gnbLis[i].className = '';
+                    console.log('hi');
+                    }
+                e.target.parentNode.className = 'on';
+            }
+        
+            if(e.target.className === 'more') {
+                console.log('bye');
+                
+            }
+        }
+        
+        for(let i = 0; i < gnbDepth.length; i++){
+            gnbDepth[i].addEventListener('click', function(e){
+                e.preventDefault();
+                if(gnbLis[i].classList.contains('on')) {
+                    gnbLis[i].classList.remove('on')
+                }
+            })
+        }
+        
+        function aictOver(e){
+            e.preventDefault();
+            if (e.target.tagName !== 'A') return
+            console.log(e.target.tagName);
+            const dropMenu = e.target.parentNode.querySelector('div');
+            if(dropMenu) {
+                dropMenu.classList.add('on');
+                preMenu = dropMenu
+            }
+        }
+        
+        function aictOut(e){
+            e.preventDefault();
+            if(preMenu === undefined) return;
+            if(!isLI(preMenu, e.relatedTarget)) {
+                preMenu.classList.remove('on');
+            } 
+            function isLI(preMenu, move) {
+                while (move.tagName !== 'HTML') {
+                    if(preMenu === move) {
+                        return true;
+                    }
+                    move = move.parentNode;
+                } 
+                return false;
+            } 
+        }
+        
+        
+        for(let i = 0 ; i < menuCenter.length; i++) {
+            menuCenter[i].addEventListener('mouseenter', function(){
+                menuCenter[i].classList.add('active');
+                if(!this.querySelector('ul')) return;
+                if(this.querySelector('ul')){
+                    this.querySelector('ul').classList.add('on');
+                }})
+            menuCenter[i].addEventListener('mouseleave', function(){
+                menuCenter[i].classList.remove('active');
+                if(!this.querySelector('ul')) return;
+                if(this.querySelector('ul')){
+                    this.querySelector('ul').classList.remove('on');
+                }})
+        }
+        
+        
+        const tabElems = document.querySelectorAll('.item > a');
+        const tabConts = document.querySelectorAll('.content');
+        
+        for(let i = 0; i < tabElems.length; i++) {
+            tabElems[i].addEventListener('click', tabon)
+        }
+        function tabon(e) {
+            e.preventDefault();
+            for(let i = 0; i < tabElems.length; i++) {
+                tabElems[i].parentNode.classList.remove('on');
+                tabConts[i].classList.remove('on');
+                console.log(this.parentNode);
+                if(tabConts[i].classList.contains(this.parentNode.className)) {
+                    tabConts[i].classList.add('on');
+                }
+            }
+            this.parentNode.classList.add('on');
+        }
+        
+        const openIcon = document.querySelector('.open');
+        const bottomBar = document.querySelector('.news')
+        const closeIcon = document.querySelector('.close')
+        const openMenu = document.querySelector('.news_up')
+        
+        openIcon.addEventListener('click', function(e){
+            e.preventDefault();
+            if (openMenu.classList.contains('on')) {
+                openMenu.classList.remove('on')
+                bottomBar.style.display = 'block';
+            } else {
+                openMenu.classList.add('on')
+                bottomBar.style.display = 'none';
+                
+            }
+        
+        });
+        
+        closeIcon.addEventListener('click', function(e){
+            e.preventDefault();
+            openMenu.classList.remove('on')
+            bottomBar.style.display = 'block';
+        })
+        
+        
+        </script>
+        </body>
+        </html>

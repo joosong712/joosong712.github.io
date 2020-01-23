@@ -111,9 +111,10 @@ main {padding-top:90px;}
 .news > .news_text > .data {float: right;}
 .news > .news_text > .open {position: absolute; top: 50%; right: 40px; transform: translateY(-50%);}
 
-.news_up.on {height: 250px; padding: 55px 40px 25px;}
+.news_up.on {display: block;}
 .news_up {position: absolute; bottom:0; background: rgba(255, 255, 255, 0.8);
-     left:50%; transform: translateX(-50%); width:1120px; height: 0; overflow: hidden;}
+     left:50%; transform: translateX(-50%); width:1120px; height: 250px;
+     padding:55px 40px 25px; display: none;}
 .news_up .left {float: left; width:220px;}
 .news_up .left > p {font-size:16px;}
 .news_up .left > strong {font-size:35px;}
@@ -415,7 +416,32 @@ footer {background-color:white;}
     .m_news {margin-bottom:10px; margin-top:10px;}
     .m_news::after {display: block; content: ''; clear: both;}
     .m_news ul > li {padding-bottom:10px; margin-bottom:10px;}
-    .m_news ul > li > a > i {display: block; margin-bottom:5px;} 
+    .m_news ul > li > a > i {display: block; margin-bottom:5px;}
+    .all_menu {border: none; border-top:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4} 
+    .all_menu > ul {position: relative; background: #077c6e; height: 1000px; overflow: hidden;}
+    .all_menu > ul > li {height: auto; border:none; padding: unset; float: none; width: 36%; 
+        text-align: center; border-bottom: 0.5px solid #e4e4e4;}
+    .all_menu > ul > li.on {background: #006155;}
+    .all_menu > ul > li.on > ul {display: block;}
+    .all_menu > ul > li > ul {margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 36%;
+        right: 0;
+        background: white;
+        padding:0 15px;
+        text-align: left;
+        display: none;
+        overflow-y: scroll;
+    }
+    .all_menu > ul > li > ul > li {margin:0; padding: 12px 0; border-bottom:1px solid #077c6e;}
+    .all_menu > ul > li > ul > li > a {font-size: 14px; color:#077c6e; font-weight: 800; display: block;}
+    .all_menu > ul > li > a {font-size: 14px; color:white; padding:15px 0; display: block;}
+    .all_menu > ul > li > ul > .more {background:url('../images/bg_dept3_off.png') no-repeat right 20px; 
+        background-size: auto 10px;}
+    .all_menu > ul > li .depth.on {display: block;}
+    .all_menu > ul > li .depth {display: none;}
     .section1 > .top .tab > .item > a {padding:5px;}
     .section1 > .top .tab > .item > .content {padding:0; padding-left: 20px;}
     .section1 > .top .tab {height:200px;}
