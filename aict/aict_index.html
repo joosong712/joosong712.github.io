@@ -924,7 +924,6 @@
         const menuCenter = document.querySelectorAll('.center > li');
         const gnbUL = allShow.querySelector('.all_menu > ul');
         const gnbLis = allShow.querySelectorAll('.all_menu > ul > li');
-        const gnbDepth = allShow.querySelectorAll('.more > .depth')
         
         // const menuRight = document.querySelectorAll('.center .right');
         var preMenu;
@@ -947,28 +946,22 @@
         
         function gnbclick(e){
             e.preventDefault();
-            if(e.target.tagName === 'A') {
+            if(e.target.className === 'left') {
                 for (let i = 0; i < gnbLis.length; i++) {
                     gnbLis[i].className = '';
-                    console.log('hi');
                     }
                 e.target.parentNode.className = 'on';
             }
-        
-            if(e.target.className === 'more') {
-                console.log('bye');
-                
-            }
-        }
-        
-        for(let i = 0; i < gnbDepth.length; i++){
-            gnbDepth[i].addEventListener('click', function(e){
-                e.preventDefault();
-                if(gnbLis[i].classList.contains('on')) {
-                    gnbLis[i].classList.remove('on')
+
+            if(e.target.parentNode.className === 'more') {
+
+                if(e.target.parentNode.classList.contains('on')) {
+                    e.target.parentNode.classList.remove('on');
+                } else {
+                    e.target.parentNode.classList.add('on');
                 }
-            })
-        }
+                }
+            }
         
         function aictOver(e){
             e.preventDefault();
