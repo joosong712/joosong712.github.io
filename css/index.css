@@ -112,6 +112,7 @@ footer{ background: #f8f9fb;}
 	.site > ul > li + li {margin:0;}
 	.site > ul > li:nth-child(2n) {margin-left:10px;}
 	.site > ul > li:nth-child(3), .site > ul > li:nth-child(4) {margin-top:10px;}
+	.site > ul > li:nth-child(4) {background: url(../redi/images/존재감의\ 차이.JPG) no-repeat -45px -3px; background-size: 166%;}
 	.footer_wrap {padding: 0 30px;}
 	.footer_wrap > .logo {right:30px;}
 	.footer_wrap > strong {font-size: 20px; width:22%;}
