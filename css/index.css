@@ -44,20 +44,22 @@ footer{ background: #f8f9fb;}
 .top > .text > strong {    
 	text-align: left;
     font-size: 60px;
-    letter-spacing: -3px;
-    line-height: 60px;}
+    letter-spacing: -2px;
+	line-height: 63px;
+	color:white;
+}
 .top > .text > span {display: block; margin-top:100px; position: relative; color:#fde700;}
 .top > .text > span::before {content: ''; position: absolute; bottom:-10px; left:0; background:#fde700; width:70px; height: 4px;}
 .sentence {max-width:1200px; margin: 50px auto;}
 .sentence > h3 {font-size: 30px; text-align: right;}
-.intro {max-width:1200px; margin: 0 auto 50px;}
+.intro {max-width:1200px; margin: 0 auto;}
 .intro > ol > li + li {margin-top:10px;}
 .intro > ol > .border {border-bottom:2px solid #e4e4e4; padding-bottom:20px; margin-bottom:20px;}
 .intro > ol > li:last-child > strong { margin-bottom:10px;}
 .main {margin:50px 0;}
 .main > div > span:nth-child(2) {font-size:13px; color:#999; vertical-align: text-top;}
 .intro > span:nth-child(3) {display: block;}
-.skill {background: #fde700;}
+.skill {background: #fde700; margin: 130px 0;}
 .skill_wrap {max-width:1200px; margin: 50px auto;}
 .skill_wrap > ul {padding:30px 0;}
 .skill_wrap > ul::after {display: block; content: ''; clear: left;}
@@ -65,7 +67,7 @@ footer{ background: #f8f9fb;}
 .skill_wrap > ul > li + li::before {content: ''; position:absolute; top:60%; left:0; width:5px; height:5px; background:white; display: block;}
 .skill_wrap > ul > li > strong { margin-bottom:15px; display: block;}
 .skill_wrap > ul > li > img {width:100px;}
-.site {max-width:1200px; margin: 50px auto;}
+.site {max-width:1200px; margin: 0 auto;}
 .site > ul::after {content: ''; display: block; clear: left;}
 .site > ul > li {width: 285px; float: left; border-radius: 170px; position: relative;}
 .site > ul > li + li {margin-left:20px;}
@@ -81,6 +83,7 @@ footer{ background: #f8f9fb;}
 
 /* footer */
 
+footer {margin-top:130px;}
 .footer_wrap {max-width: 1200px; height: 150px; margin:0 auto; position: relative; overflow: hidden;}
 .footer_wrap::after {content: ''; display: block; clear: both;}
 .footer_wrap > strong {width:33.3333%; float: left; font-size: 40px; padding:50px 0;}
